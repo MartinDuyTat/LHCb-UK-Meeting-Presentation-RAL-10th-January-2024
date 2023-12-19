@@ -303,6 +303,7 @@
   \begin{center}
     \Large Key free parameters in the fit:
   \end{center}
+  \vspace{-0.3cm}
   \begin{itemize}
     \item{$\gamma$ (obviously)}
     \item{$r_B$, $\delta_B$: Hadronic parameters of $B^\pm\to DK^\pm$}
@@ -312,10 +313,11 @@
   \begin{block}{$B^\pm\to DK^\pm$ yield in bin $i$}
     $\hat{N}_{\pm i}^\pm = h_{B^\pm}\Big(F_i + r_B^2F_{+i} + 2r_B\sqrt{F_+F_{-i}}\big(\cos(\delta_B \pm \gamma)c_i - \sin(\delta_B \pm \gamma)s_i\big)\Big)$
   \end{block}
-  \vspace{0.1cm}
+  \vspace{-0.1cm}
   \begin{center}
-    \Large In principle straightforward: Fit $B^\pm$ yields and extract $\gamma$
-    \small Reduce binning to $2\times 4$ bins to accommodate BESIII statistics
+    \Large In principle straightforward: Fit $B^\pm$ yields and extract $\gamma$\\~\\
+    \small Reduce binning to $2\times 4$ bins to accommodate BESIII statistics:\\
+    \small Current analysis uses $\SI{8}{\per\femto\barn}$ at $\psi(3770)$, expect $\SI{20}{\per\femto\barn}$ in the near future
   \end{center}
 \end{frame}
 
@@ -337,6 +339,81 @@
       \put(-47,13){$2\times 8$ bins \checkmark}
     \end{overpic}
   \end{figure}
+\end{frame}
+
+\begin{frame}{Strong-phase measurement at charm factories}
+  \begin{center}
+    {\Large Quick digression: Charm factories 101}\\~\\
+    {\large Consider charm production at threshold: $e^+e^-\to\psi(3770)\to D^0\bar{D^0}$}
+  \end{center}
+  \vspace{0.2cm}
+  \begin{itemize}
+    \item{$\psi(3770)\to D^0\bar{D^0}$ decay conserves $\mathcal{C} = -1$}
+  \end{itemize}
+  \begin{figure}[H]
+    \centering
+    \vspace{-1.5cm}
+    \begin{fmffile}{fgraph/fgraph_ee2}
+      \setlength{\unitlength}{1cm}
+      \begin{fmfgraph*}(7,5)
+        \fmfleft{i}
+        \fmfright{o}
+        \fmflabel{$D_-$}{i}
+        \fmflabel{$D_+\to K^+K^-$}{o}
+        \fmf{fermion}{w,i}
+        \fmf{fermion}{w,o}
+        \fmfblob{1cm}{w}
+        \fmfv{label=$\psi(3770)$,label.dist=15,label.angle=90}{w}
+      \end{fmfgraph*}
+    \end{fmffile}
+    \vspace{-2.0cm}
+  \end{figure}
+  \begin{itemize}
+    \item{If, for example, the tag is CP-even, $D_+\to K^+K^-$, the other $D$ meson is forced into an CP-odd state}
+  \end{itemize}
+  \vspace{0.18cm}
+\end{frame}
+
+\begin{frame}{Strong-phase measurement at charm factories}
+  \begin{center}
+    {\Large Quick digression: Charm factories 101}\\~\\
+    {\large Consider charm production at threshold: $e^+e^-\to\psi(3770)\to D^0\bar{D^0}$}
+  \end{center}
+  \vspace{0.2cm}
+  \begin{itemize}
+    \item{CP-odd wave function and decay rate:}
+  \end{itemize}
+  \begin{align*}
+    \mathcal{A}(D_-) =& \mathcal{A}(D^0) - \mathcal{A}(\bar{D^0}) \implies \\[1em]
+    \lvert\mathcal{A}(D_-)\rvert^2 =& \lvert\mathcal{A}(D^0)\rvert^2 + \lvert\mathcal{A}(\bar{D^0})\rvert^2 - \colorbox{Cerulean!30}{$2\lvert\mathcal{A}(D^0)\rvert\lvert\mathcal{A}(\bar{D^0})\rvert\cos(\delta_D)$}
+  \end{align*}
+  \vspace{-0.4cm}
+  \begin{center}
+    {\Large With CP tags, one can \underline{directly access} $\cos(\delta_D)$}
+  \end{center}
+  \vspace{-0.165cm}
+\end{frame}
+
+\begin{frame}{Strong-phase measurement at charm factories}
+  \begin{center}
+    {\Large Quick digression: Charm factories 101}\\~\\
+    \vspace{-0.11cm}
+    \begin{minipage}{0.7\textwidth}
+      \begin{block}{\centering CP tags}
+        \centering
+        $N_i \propto K_i + K_{-i} \mp 2\sqrt{K_iK_{-i}}c_i$
+      \end{block}
+      \begin{block}{\centering Self-conjugate multi-body tags}
+        \centering
+        $N_{ij} \propto K_iK^\prime_{-j} + K_{-i}K^\prime_j - 2\sqrt{K_iK_{-i}K^\prime_jK^\prime_{-j}}(c_ic^\prime_j + s_is^\prime_j)$
+      \end{block}
+    \end{minipage}
+  \end{center}
+  \begin{enumerate}
+    \setlength\itemsep{1.0em}
+    \item{More than 10 different CP tags $\implies$ Can measure $c_i$ precisely}
+    \item{Only $D\to K_S^0h^+h^-$ tag is sensitive to $s_i$ $\implies$ Worse $s_i$ precision}
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}{Simultaneous fit of LHCb and BESIII bin yields}
@@ -384,7 +461,7 @@
   {\large Conclusion from toy studies:}
   \vspace{-0.0cm}
   \begin{enumerate}
-    \item{Well behaved fit, with expected sensitivity of $\sigma(\gamma) = 16^\circ$}
+    \item{Well behaved fit, with expected sensitivity of $\sigma(\gamma) = 16.6^\circ$}
     \item{Only small corrections to bias and coverage required}
     \item{Will update $\gamma$ result once BESIII meausurement is released}
   \end{enumerate}
@@ -413,6 +490,41 @@
   \begin{center}
     {\large Charm strong-phase differences were \underline{crucial} for this measurement!}
   \end{center}
+\end{frame}
+
+\begin{frame}{Charm mixing studies with multi-body decays}
+  \begin{center}
+    \Large Ongoing charm mixing study of $D\to h^+h^-\pi^+\pi^-$\\
+    \normalsize by Jairus Tristan Patoc
+  \end{center}
+  \vspace{-0.2cm}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \vspace{-0.3cm}
+      \begin{itemize}
+        \setlength\itemsep{1.0em}
+        \item{Prompt $D^{*+}\to D^0\pi^+$ sample}
+        \item{Study $D^0\to h^+h^-\pi^+\pi^-$}
+        \item{Run 1 and 2 ($\SI{9}{\per\femto\barn}$)}
+        \item{Expected yields are}
+        \begin{itemize}
+          \item{$K^+K^-\pi^+\pi^-$: 4 million}
+          \item{$\pi^+\pi^-\pi^+\pi^-$: 12 million}
+        \end{itemize}
+        \item{Current work:}
+        \begin{enumerate}
+          \item{Sensitivity and bias studies}
+          \item{Optimised selection}
+        \end{enumerate}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}[htb]
+        \centering
+        \includegraphics[width=1.0\textwidth,trim={44cm 0 3cm 81cm},clip=true]{Plots/STFC_poster_Jairus.pdf}
+      \end{figure}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{Charm mixing studies with multi-body decays}
@@ -527,8 +639,13 @@
   \end{center}
   \begin{figure}[htb]
     \centering
-    \includegraphics[width=0.8\textwidth]{Plots/ci_sensitivity.pdf}
+    \includegraphics[width=0.7\textwidth]{Plots/ci_sensitivity.pdf}
   \end{figure}
+  \vspace{-0.4cm}
+  \begin{itemize}
+    \item{BESIII yields equivalent to $\SI{8}{\per\femto\barn}$ of $\psi(3770)$}
+    \item{4 million $D\to K^+K^-\pi^+\pi^-$ candidates in mixing analysis}
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Charm mixing studies with multi-body decays}
@@ -537,8 +654,13 @@
   \end{center}
   \begin{figure}[htb]
     \centering
-    \includegraphics[width=0.8\textwidth]{Plots/si_sensitivity.pdf}
+    \includegraphics[width=0.7\textwidth]{Plots/si_sensitivity.pdf}
   \end{figure}
+  \vspace{-0.4cm}
+  \begin{itemize}
+    \item{BESIII yields equivalent to $\SI{8}{\per\femto\barn}$ of $\psi(3770)$}
+    \item{4 million $D\to K^+K^-\pi^+\pi^-$ candidates in mixing analysis}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Summary and future prospects}
